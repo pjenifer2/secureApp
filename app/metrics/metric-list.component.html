@@ -1,0 +1,23 @@
+<div class='page-header'>
+            <h1>{{pageTitle}}</h1>
+            Welcome, {{ userName }}!
+</div>
+
+<div class = 'row'>
+  <div class='col-md-6'>
+  <label for='ex1'>Search</label>
+  <input type='text' id='ex1' [(ngModel)] = 'listFilter' class='form-control'>
+  <br>
+  </div>   
+</div>
+
+
+<div class = 'row' *ngIf='metrics && metrics.length'>
+        <div class="col-md-3" *ngFor = 'let metric of metrics'>
+            <div class="well">
+            <h4 class="text-center">{{ metric.metricName }}</h4>
+            <br>
+            <h1 class="text-center">{{ metric.metricValue }}</h1>
+            </div>
+        </div>
+</div>
