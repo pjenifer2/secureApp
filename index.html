@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
-<head  lang="en">
-    <base hreft="UTF-8">
-    <title>SecurePortal </title>
-    <meta charset="utf-8">
+<head lang="en">
+    <title>Acme Product Management</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="app/app.component.css" rel="stylesheet" />
 
@@ -22,48 +21,11 @@
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
-  
-  
 </head>
+
 <body>
-
-<div class="container">
-  <h1>Secure Portal</h1>
-  <p>
-
-    <div class = "row">
-        <div class="col-md-3">
-            <div class="well">
-            <h3 class="text-center">Individuals failing Phishing tests</h3>
-            <br>
-            <h3 class="text-center">3</h3>
-            </div>
-        </div>
-         <div class="col-md-3">
-            <div class="well">
-            <h3 class="text-center">Database Activity Monitoring Coverage</h3>
-            <br>
-            <h3 class="text-center">95%</h3>
-            </div>
-        </div>
-         <div class="col-md-3">
-            <div class="well">
-            <h3 class="text-center">Non-Redacted Users with Database Access</h3>
-            <br>
-            <h3 class="text-center">65</h3>
-            </div>
-        </div>
-         <div class="col-md-3">
-            <div class="well">
-            <h3 class="text-center">Recommended Vulnerability Actions</h3>
-            <br>
-            <h3 class="text-center">4</h3>
-            </div>
-        </div>
-    </div>
-
-   
-</div>
-
+    <pm-app></pm-app>
+    Starter files
 </body>
+
 </html>
