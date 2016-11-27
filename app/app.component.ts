@@ -5,7 +5,7 @@ import { MetricService } from './metrics/metric.service'
     selector: 'pm-app',
     template: `
         
-            <pm-metrics></pm-metrics>
+            <router-outlet></router-outlet>
         
     `,
     providers: [ MetricService ]

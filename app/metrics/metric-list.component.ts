@@ -6,7 +6,6 @@ import { MetricService } from './metric.service'
 
 
 @Component({
-    selector: 'pm-metrics',
     moduleId: module.id,
     templateUrl: 'metric-list.component.html'
 })

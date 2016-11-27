@@ -9,20 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var metric_service_1 = require('./metrics/metric.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = 'Secure Portal';
+var router_1 = require('@angular/router');
+var MetricDetailComponent = (function () {
+    function MetricDetailComponent(_route) {
+        this._route = _route;
+        this.pageTitle = 'Metric Detail goes here';
     }
-    AppComponent = __decorate([
+    MetricDetailComponent.prototype.ngOnInit = function () {
+        var id = +this._route.snapshot.params['id'];
+        this.pageTitle += ": " + id + " ";
+    };
+    MetricDetailComponent = __decorate([
         core_1.Component({
-            selector: 'pm-app',
-            template: "\n        \n            <router-outlet></router-outlet>\n        \n    ",
-            providers: [metric_service_1.MetricService]
+            templateUrl: 'app/metrics/metric-detail.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [router_1.ActivatedRoute])
+    ], MetricDetailComponent);
+    return MetricDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.MetricDetailComponent = MetricDetailComponent;
+//# sourceMappingURL=metric-detail.component.js.map

@@ -16,10 +16,13 @@
 
 <div class = 'row' *ngIf='metrics && metrics.length'>
         <div class='col-md-3' *ngFor='let metric of metrics | metricFilter:listFilter'>
-            <div class="well">
-            <h4 class="text-center">{{ metric.metricName }}</h4>
-            <br>
-            <h1 class="text-center">{{ metric.metricValue }}</h1>
-            </div>
+              <a [routerLink]="['/metric',metric.metricId]">
+              
+              <div class="well">
+                  <h4 class="text-center">{{ metric.metricName }}</h4>
+                  <h1 class="text-center">{{ metric.metricValue }}</h1>
+              </div>
+              </a>
+        
         </div>
 </div>

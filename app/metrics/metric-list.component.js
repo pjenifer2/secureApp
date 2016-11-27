@@ -23,7 +23,6 @@ var MetricListComponent = (function () {
     };
     MetricListComponent = __decorate([
         core_1.Component({
-            selector: 'pm-metrics',
             moduleId: module.id,
             templateUrl: 'metric-list.component.html'
         }), 
