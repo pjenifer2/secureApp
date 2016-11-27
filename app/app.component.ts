@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MetricService } from './metrics/metric.service'
 
 @Component({
     selector: 'pm-app',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
         
             <pm-metrics></pm-metrics>
         
-    `
+    `,
+    providers: [ MetricService ]
 })
 
 export class AppComponent { 

@@ -9,20 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var metric_service_1 = require('./metrics/metric.service');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.pageTitle = 'Secure Portal';
+var MetricFilterPipe = (function () {
+    function MetricFilterPipe() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'pm-app',
-            template: "\n        \n            <pm-metrics></pm-metrics>\n        \n    ",
-            providers: [metric_service_1.MetricService]
+    MetricFilterPipe.prototype.transform = function (value, filterBy) {
+        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
+        return filterBy ? value.filter(function (metric) {
+            return metric.metricName.toLocaleLowerCase().indexOf(filterBy) !== -1;
+        }) : value;
+    };
+    MetricFilterPipe = __decorate([
+        core_1.Pipe({
+            name: 'metricFilter'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], MetricFilterPipe);
+    return MetricFilterPipe;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.MetricFilterPipe = MetricFilterPipe;
+//# sourceMappingURL=metric-filter.pipe.js.map

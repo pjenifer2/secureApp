@@ -1,13 +1,39 @@
 [
-    {
-        "productId": 1,
-        "productName": "Leaf Rake",
-        "productCode": "GDN-0011",
-        "releaseDate": "March 19, 2016",
-        "description": "Leaf rake with 48-inch wooden handle.",
-        "price": 19.95,
-        "starRating": 3.2,
-        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
-    }
-    
+        {
+            "metricId" : 1,
+            "metricName" : "Individuals failing Phishing tests",
+            "metricValue" : "3",
+            "metricAction" : 0,
+            "metricComm" : 1,
+            "userDismiss" : 1
+            
+        },
+        {
+            "metricId" : 2,
+            "metricName" : "Database Activity Monitoring Coverage",
+            "metricValue" : "95%",
+            "metricAction" : 1,
+            "metricComm" : 1,
+            "userDismiss" : 1
+            
+        },
+        {
+            "metricId" : 3,
+            "metricName" : "Non-Redacted Users with Database Access",
+            "metricValue" : "65",
+            "metricAction" : 1,
+            "metricComm" : 1,
+            "userDismiss" : 1
+            
+        },
+        {
+            "metricId" : 4,
+            "metricName" : "Recommended Vulnerability Actions",
+            "metricValue" : "4",
+            "metricAction" : 0,
+            "metricComm" : 1,
+            "userDismiss" : 1
+            
+        }
+
 ]

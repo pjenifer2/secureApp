@@ -7,13 +7,15 @@
   <div class='col-md-6'>
   <label for='ex1'>Search</label>
   <input type='text' id='ex1' [(ngModel)] = 'listFilter' class='form-control'>
-  <br>
+  <br>Filtered by: {{listFilter}}
   </div>   
 </div>
 
 
+
+
 <div class = 'row' *ngIf='metrics && metrics.length'>
-        <div class="col-md-3" *ngFor = 'let metric of metrics'>
+        <div class='col-md-3' *ngFor='let metric of metrics | metricFilter:listFilter'>
             <div class="well">
             <h4 class="text-center">{{ metric.metricName }}</h4>
             <br>
